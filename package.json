@@ -1,0 +1,27 @@
+{
+  "name": "mod2projetofinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafapearl/Mod2PROJETOFINAL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rafapearl/Mod2PROJETOFINAL/issues"
+  },
+  "homepage": "https://github.com/Rafapearl/Mod2PROJETOFINAL#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

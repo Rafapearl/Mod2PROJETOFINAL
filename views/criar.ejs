@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+    <title>Publique !</title>
+</head>
+<body>
+    <form action="/subscription" method="POST">
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+        </div>
+    
+        <div>
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+        </div>
+        <div>
+            <label for="titulo">Titulo:  </label>
+            <input type="text" name="titulo" id="titulo" placeholder="Digite o titulo" placeholder="Digite o titulo" required>
+        </div>
+
+
+        <div  class = "publiq">
+            <label for="publi">Digite o seu artigo: </label>
+            <textarea rows="30" cols="300" maxlength="5000" id="publi" name="publi" required></textarea></textarea>
+
+        </div>
+    
+        <button type="submit">Inscrever-se</button>
+    </form>
+</body>
+</html>

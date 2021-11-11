@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= titulo %></title>
+</head>
+<body>
+    <% if(message != "") {  %>
+        <section id="message">
+            <p><%= message %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
+    <main class="index">
+        <% formula.forEach((formula, find) => { %>
+        <section class="containerCard" class="animation_in"> 
+          <article class="card_content">
+        <a class= "linken" href="/detalhes/<%= find %>">
+            
+            <h2 class="nomeHome"><%= formula.nome %></h2>
+            <h4 class="emailHome"><%= formula.email %></h4>
+            <h4 class="tituloHome"><%= formula.titulo %></h4>
+            <p class="publiHome"><%= formula.publi %></p>
+
+       </a>
+         
+          </article>
+        </section>
+        <% }) %>
+      </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
