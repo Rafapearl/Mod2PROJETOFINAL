@@ -1,6 +1,8 @@
-body{background: rgb(245, 255, 242);  height: 800px;
-  width:  1300px;
-  border: solid;}
+body {
+  background: rgb(245, 255, 242);  height: 800px;
+  width:  100%;
+  font-family: 'Roboto', sans-serif;
+}
 
 /*cores da logo: #1C1369   , #7A6BFF*/
 
@@ -34,4 +36,8 @@ section#message {
     transform: scale(1.5);
   }
 
-  .publiq {display: flex; align-items: center; text-align: center; width: 70%;}
+  .publiq {
+    display: flex; 
+    align-items: center; 
+    text-align: center; 
+    width: 70%;}

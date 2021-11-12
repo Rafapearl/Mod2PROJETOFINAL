@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title><%= titulo %></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>
+    <%= titulo %>
+  </title>
 </head>
+
 <body>
-    <header> 
+  
+  <%- include('header'); %>
+  <% if(message !="" ) { %>
+    <section id="message">
+      <p>
+        <%= message %>
+      </p> <span id="close">&times;</span>
+    </section>
+    <% } %>
+      <main class="index">
+        <% formula.forEach((formula, find)=> { %>
+          <section class="containerCard" class="animation_in">
+            <article class="card_content">
+              <a class="linken" href="/detalhes/<%= find %>">
 
-        
-    </header>
-    <% if(message != "") {  %>
-        <section id="message">
-            <p><%= message %></p> <span id="close">&times;</span>
-        </section>
-    <% }  %>
-    <main class="index">
-        <% formula.forEach((formula, find) => { %>
-        <section class="containerCard" class="animation_in"> 
-          <article class="card_content">
-        <a class= "linken" href="/detalhes/<%= find %>">
-            
-            <h2 class="nomeHome"><%= formula.nome %></h2>
-            <h4 class="emailHome"><%= formula.email %></h4>
-            <h4 class="tituloHome"><%= formula.titulo %></h4>
-            <p class="publiHome"><%= formula.publi %></p>
+                <h2 class="nomeHome">
+                  <%= formula.nome %>
+                </h2>
+                <h4 class="emailHome">
+                  <%= formula.email %>
+                </h4>
+                <h4 class="tituloHome">
+                  <%= formula.titulo %>
+                </h4>
+                <p class="publiHome">
+                  <%= formula.publi %>
+                </p>
 
-       </a>
-         
-          </article>
-        </section>
-        <% }) %>
+              </a>
+
+            </article>
+          </section>
+          <% }) %>
       </main>
 
-    <script src="/js/script.js"></script>
+      <script src="/js/script.js"></script>
 </body>
+
 </html>

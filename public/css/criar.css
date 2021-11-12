@@ -1,0 +1,16 @@
+/* Página de criação de artigos */
+
+main {
+  margin: 30px 0 0 30px;
+  display: flex;
+  align-content: center;
+}
+
+form label {
+  font-size: 1.2rem;
+}
+
+textarea {
+  width: 80%;
+  height: 80%;
+}

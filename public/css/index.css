@@ -1,0 +1,5 @@
+/* Página onde ficarão os artigos */
+
+.index {
+  display: flex;
+}
