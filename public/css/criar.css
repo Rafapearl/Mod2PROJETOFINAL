@@ -4,11 +4,9 @@ main {
   margin: 30px 0 0 30px;
   display: flex;
   height: 600px;
+  font-size: 1.2em;
 }
 
-.input-criar label {
-  font-size: 1.2rem;
-}
 
 .text-area {
   width: 80%;
@@ -26,22 +24,29 @@ main {
   align-items: center; 
   text-align: center; 
   width: 50%;
+  font-size: 1em;
 }
 
 .input-criar {
   background-color: transparent ;
   border: 0;
   border-bottom: 2px solid #000;
+  margin-bottom: 10px;
 }
 
 .input-criar:focus {
   outline: 0;
+  color: aqua;
 }
 
-.input-criar::placeholder {
+.input-criar::-webkit-input-placeholder {
   color: #fff;
+  font-size: 1.4em;
 }
 
 button {
-    
+  color: #fff;
+  border: 0;
+  background-color: #1C1369;
+  
 }
