@@ -3,14 +3,45 @@
 main {
   margin: 30px 0 0 30px;
   display: flex;
-  align-content: center;
+  height: 600px;
 }
 
-form label {
+.input-criar label {
   font-size: 1.2rem;
 }
 
-textarea {
+.text-area {
   width: 80%;
   height: 80%;
+  border: 0;
+  border-radius: 3px;
+}
+
+.text-area:focus {
+  outline: 0;
+}
+
+.publiq {
+  display: flex; 
+  align-items: center; 
+  text-align: center; 
+  width: 50%;
+}
+
+.input-criar {
+  background-color: transparent ;
+  border: 0;
+  border-bottom: 2px solid #000;
+}
+
+.input-criar:focus {
+  outline: 0;
+}
+
+.input-criar::placeholder {
+  color: #fff;
+}
+
+button {
+    
 }

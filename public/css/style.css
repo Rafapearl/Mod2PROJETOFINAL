@@ -1,5 +1,5 @@
 body {
-  background: rgb(245, 255, 242);  height: 800px;
+  background-color:#7A6BFF;
   width:  100%;
   font-family: 'Roboto', sans-serif;
 }
@@ -36,8 +36,3 @@ section#message {
     transform: scale(1.5);
   }
 
-  .publiq {
-    display: flex; 
-    align-items: center; 
-    text-align: center; 
-    width: 70%;}
