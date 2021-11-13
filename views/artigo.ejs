@@ -11,5 +11,29 @@
 </head>
 <body>
     <%- include('header'); %>
+
+    <% formula.forEach((formula, find)=> { %>
+        <section class="containerCard" class="animation_in">
+          <article class="card_content">
+            <a class="linken" href="/artigo/<%= find %>">
+
+              <h2 class="nomeHome">
+                <%= formula.nome %>
+              </h2>
+              <h4 class="emailHome">
+                <%= formula.email %>
+              </h4>
+              <h4 class="tituloHome">
+                <%= formula.titulo %>
+              </h4>
+              <p class="publiHome">
+                <%= formula.publi %>
+              </p>
+
+            </a>
+
+          </article>
+        </section>
+        <% }) %>
 </body>
 </html>

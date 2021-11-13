@@ -41,5 +41,11 @@ app.get("/", (req, res) => {
     message = `Parabéns ${nome}, o seu post foi publicado com sucesso!`;
     res.redirect("/");
   });
+
+  app.get("/artigo/:id", function (req, res) {
+    const id = req.params.id;
+    const form = formula[id];
+    res.render("artigo", { form, formula });
+  });
 // Adicionando a const port e uma arow function de callback para mostrar no console que o servidor está rodando.
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
