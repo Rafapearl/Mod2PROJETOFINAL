@@ -11,20 +11,38 @@ main {
 }
 
 .text-area {
-  width: 80%;
-  height: 80%;
-  border: 0;
-  border-radius: 3px;
+  background-color: #dddddd;
+  color: #666666;
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  outline: none;
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  width: 900px;
+  height: 1200px;
+  transition: all 0.2s;
+  resize: none;
+}
+
+.text-area:hover {
+  background-color: #eeeeee;
 }
 
 .text-area:focus {
-  outline: 0;
+  cursor: text;
+  color: #333333;
+  background-color: white;
+  border-color: #333333;
 }
 
+
 .publiq {
-  display: flex; 
-  align-items: center; 
-  text-align: center; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 50%;
 }
 
@@ -33,6 +51,8 @@ main {
   border: 0;
   border-bottom: 2px solid #000;
 }
+.input-criar ::placeholder {
+  color: black; font: 3em sans-serif;}
 
 .input-criar:focus {
   outline: 0;
@@ -45,3 +65,5 @@ main {
 button {
     
 }
+
+.DigArt{margin:1em; align:center;}

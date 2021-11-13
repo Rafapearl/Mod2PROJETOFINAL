@@ -18,6 +18,7 @@ section#message {
     font-size: 1.1rem;
     font-weight: 600;
     position: fixed;
+    height: 70px;
 
   
     display: flex;

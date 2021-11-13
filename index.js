@@ -35,8 +35,8 @@ app.get("/", (req, res) => {
 
 
   app.post("/subscription", (req, res) => {
-    const { nome, email, publi, titulo } = req.body;
-    formula.push({ nome, email, publi, titulo });
+    const { nome, email, publi, titulo, imagem } = req.body;
+    formula.push({ nome, email, publi, titulo, imagem });
 
     message = `Parabéns ${nome}, o seu post foi publicado com sucesso!`;
     res.redirect("/");

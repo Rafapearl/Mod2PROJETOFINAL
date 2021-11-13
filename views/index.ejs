@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/index.css">
+
   <title>
     <%= titulo %>
   </title>
@@ -32,18 +34,13 @@
             <article class="card_content">
               <a class="linken" href="/artigo/<%= find %>">
 
-                <h2 class="nomeHome">
-                  <%= formula.nome %>
-                </h2>
-                <h4 class="emailHome">
-                  <%= formula.email %>
-                </h4>
-                <h4 class="tituloHome">
+                <img src="<%= formula.imagem %>" alt="Imagem do tema" class="imgPubli">
+                <h1 class="tituloArtigo">
                   <%= formula.titulo %>
                 </h4>
-                <p class="publiHome">
-                  <%= formula.publi %>
-                </p>
+                <h2 class="nomeArtigo">
+                  by: <%= formula.nome %>
+                </h2>
 
               </a>
 

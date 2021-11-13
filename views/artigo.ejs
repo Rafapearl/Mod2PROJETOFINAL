@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/artigo.css">
+
 
    
     <title>Artigo</title>
@@ -12,28 +14,27 @@
 <body>
     <%- include('header'); %>
 
-    <% formula.forEach((formula, find)=> { %>
         <section class="containerCard" class="animation_in">
           <article class="card_content">
-            <a class="linken" href="/artigo/<%= find %>">
+            
 
-              <h2 class="nomeHome">
-                <%= formula.nome %>
+            <h1 class="tituloArtigo">
+                <%= form.titulo %>
+              </h4>
+              <h2 class="nomeArtigo">
+                by: <%= form.nome %>
               </h2>
-              <h4 class="emailHome">
-                <%= formula.email %>
+              <h4 class="emailArtigo">
+                email: <%= form.email %>
               </h4>
-              <h4 class="tituloHome">
-                <%= formula.titulo %>
-              </h4>
-              <p class="publiHome">
-                <%= formula.publi %>
+
+              <p class="publiArtigo">
+                <%= form.publi %>
               </p>
 
-            </a>
+            
 
           </article>
         </section>
-        <% }) %>
 </body>
 </html>
