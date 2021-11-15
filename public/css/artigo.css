@@ -1,0 +1,45 @@
+.containerCard{background-color: rgb(242, 245, 255); 
+              border: #1C1369 solid 3px;
+              border-radius: 8px;    
+              width: 70em; 
+              justify-content: center; 
+              margin-left: auto; 
+              margin-right: auto; 
+              padding: 5em; 
+              margin:4em;
+              }
+
+
+  
+
+  .tituloArtigo{    text-transform: capitalize; 
+                    text-align: center; 
+                    font-size:4rem;
+                    font-family: Courier, monospace;
+  }
+
+  .nomeArtigo{ text-transform: capitalize; 
+                font: 1rem sans-serif;
+                text-align: center; 
+                margin-top: 1em;}
+
+
+.emailArtigo{ 
+    font: 1rem sans-serif;
+    text-align: center; }
+
+.publiArtigo{margin-top: 3em; 
+            font-family: Times, "Times New Roman", serif;}
+
+
+
+
+
+
+
+
+
+
+
+
+
