@@ -1,6 +1,5 @@
 body {
   background-color:#7A6BFF;
-  width:  100%;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -32,7 +31,7 @@ section#message {
     transition: .3s;
   }
   
-  span#close:hover{
+  span#close:hover {
     color: rgb(255, 0, 0);
     transform: scale(1.5);
   }

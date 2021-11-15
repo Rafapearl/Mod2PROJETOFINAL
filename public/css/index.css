@@ -17,7 +17,22 @@
  
 }
 
-.card_content{margin: 3em; }
+.card_content{
+  margin: 3em; 
+}
 
-.imgPubli {align-items: center;width:10rem; height: 10rem;}
-.tituloArtigo {font-size: 1.5em; font-weight: bold;  width: 20rem; margin-top: 2em; margin-bottom: 2em; margin-left: auto; margin-right: auto;}
+.imgPubli {
+  align-items: center;
+  width:10rem; 
+  height: 10rem;
+}
+
+.tituloArtigo {
+  font-size: 1.5em; 
+  font-weight: bold; 
+  width: 20rem; 
+  margin-top: 2em;
+  margin-bottom: 2em; 
+  margin-left: auto; 
+  margin-right: auto;
+}
