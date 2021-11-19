@@ -1,4 +1,6 @@
-const database = require("./database");
+const database = require("../database");
+const Sequelize = require("sequelize");
+
 
 const Artigo = database.define("artigo", {
   id: {
@@ -7,11 +9,19 @@ const Artigo = database.define("artigo", {
     allowNull: false,
     primaryKey: true,
   },
-  titulo: {
+  nome: {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  texto: {
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  publi: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  titulo: {
     type: Sequelize.STRING,
     allowNull: false,
   },

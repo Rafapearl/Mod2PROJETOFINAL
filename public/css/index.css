@@ -8,7 +8,9 @@
 
 
 .containerCard{
-  width: 15rem; background-color: rgb(242, 245, 255); border: solid red 3px;
+  width: 15rem; 
+  background-color: rgb(242, 245, 255); 
+  border: solid red 3px;
   margin: 3em;
   padding: 3em;
   display: flex;

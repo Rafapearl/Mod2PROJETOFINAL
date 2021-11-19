@@ -13,9 +13,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/index.css">
 
-  <title>
-    <%= titulo %>
-  </title>
+  
 </head>
 
 <body>
@@ -29,17 +27,23 @@
     </section>
     <% } %>
       <main class="index">
-        <% formula.forEach((formula, find)=> { %>
+        <% artigo.forEach(item => { %>
           <section class="containerCard" class="animation_in">
             <article class="card_content">
-              <a class="linken" href="/artigo/<%= find %>">
+              <a class="linken" href="/artigo/<%= item.id %>">
 
-                <img src="<%= formula.imagem %>" alt="Imagem do tema" class="imgPubli">
-                <h1 class="tituloArtigo">
-                  <%= formula.titulo %>
-                </h4>
+                <img src="<%= item.imagem %>" alt="Imagem do tema" class="imgPubli">
+
+                <h2 class="tituloArtigo">
+                  <%= item.titulo %>
+                </h2>
+
                 <h2 class="nomeArtigo">
-                  by: <%= formula.nome %>
+                  by: <%= item.nome %>
+                </h2>
+
+                <h2 class="emailArtigo">
+                  email: <%= item.email %>
                 </h2>
 
               </a>
