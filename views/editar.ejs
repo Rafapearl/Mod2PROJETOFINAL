@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Editar</title>
+</head>
+
+<body>
+  <%- include('header'); %>
+
+    <section class="area__editar">
+      <form action="/editar/<%= artigo.id %>" method="POST">
+        <div>
+          <label for="nome">Altere o título</label>
+          <input type="text" name="nome" value="<%= artigo.titulo %>">
+        </div>
+        <div>
+          <label for="nome">Altere seu nome</label>
+          <input type="text" name="nome" value="<%= artigo.nome %>">
+        </div>
+        <div>
+          <label for="email">Altere o e-mail</label>
+          <input type="text" name="email" value="<%= artigo.email %>">
+        </div>
+        <div>
+          <label for="texto">Altere o artigo</label>
+          <input type="text" name="texto" value="<%= artigo.publi %>">
+        </div>
+      </form>
+
+    </section>
+</body>
+
+</html>

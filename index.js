@@ -109,8 +109,47 @@ app.get("/editar/:id", async (req, res) => {
   }
 
   res.render("editar", {
-    artigo,
+    artigo, message
   });
+});
+
+  // res.render("editar", {
+  //   artigo,
+  // });
+
+
+app.post("/editar/:id", async (req, res) => {
+  const artigo = await Artigo.findByPk(req.params.id);
+
+  const { nome, email, publi, titulo, imagem } = req.body;
+
+  artigo.nome = nome;
+  artigo.email = email;
+  artigo.publi = publi;
+  artigo.titulo = titulo;
+  artigo.imagem = imagem;
+
+  const artigoEditado = await artigo.save()
+
+  res.render("editar", {
+    artigo: artigoEditado,
+    mensagemSucesso: "Artigo editado com sucesso!",
+  });
+});
+
+
+app.post("/deletar/:id", async (req, res) => {
+  const artigo = await Artigos.findByPk(req.params.id);
+
+  if (!artigo) {
+    res.render("deletar", {
+      mensagem: "Artigo não foi encontrado!",
+    });
+  }
+
+  await Artigos.destroy();
+
+  res.redirect("/");
 });
 
 // Adicionando a const port e uma arow function de callback para mostrar no console que o servidor está rodando.

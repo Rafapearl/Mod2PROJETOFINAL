@@ -33,6 +33,18 @@
           <%= artigo.publi %>
         </p>
 
+        <div class="area__botao">
+         
+          <a class="botao__editar" action="/editar/<%= artigo.id %>" type="submit" method="POST" href="/editar.ejs">
+            Editar
+          </a>
+  
+          <a class="botao__deletar" action="/deletar/<%= artigo.id %>" type="submit" method="DELETE" >
+            Deletar
+          </a>
+
+        </div>
+
       </article>
     </section>
 </body>
