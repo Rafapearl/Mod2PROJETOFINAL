@@ -137,17 +137,34 @@ app.post("/editar/:id", async (req, res) => {
   });
 });
 
+app.get("/deletar/:id", async(req, res) => {
+  const artigo = await Artigo.findByPk(req.params.id)
+
+  if(!artigo) {
+    res.render("deletar", {
+      artigo,
+      message: "Artigo não encontrado",
+    })
+  }
+
+  res.render('deletar', {
+    artigo, mensagem
+  })
+})
+
 
 app.post("/deletar/:id", async (req, res) => {
   const artigo = await Artigos.findByPk(req.params.id);
 
   if (!artigo) {
     res.render("deletar", {
-      mensagem: "Artigo não foi encontrado!",
+      artigo, mensagem: "Artigo não foi encontrado!",
     });
   }
 
   await Artigos.destroy();
+
+  message = `Artigo ${artigo.titulo} deletado com sucesso!`
 
   res.redirect("/");
 });
