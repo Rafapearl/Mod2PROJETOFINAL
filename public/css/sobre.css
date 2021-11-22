@@ -1,0 +1,45 @@
+.autores {
+  text-align: center;
+}
+
+.autores__titulo {
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.autores__contato {
+  font-size: 2.2rem;
+  margin-top: 1.5rem;
+}
+
+.pessoas {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pessoa__imagem {
+  height: 260px;
+  width: 260px;
+  margin: 30px auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+  margin-bottom: 30px;
+}
+
+.pessoa__link {
+  color: #ffffff;
+}
+
+.pessoa__imagem--rafael {
+  background-image: url(../img/rafael.jpg);
+}
+
+.pessoa__imagem--bernardo {
+  background-image: url(../img/bernardo.jpg);
+}
+
+.pessoa__imagem--ruy {
+  background-image: url(../img/ruy.jpg);
+}

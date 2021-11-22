@@ -3,37 +3,36 @@
 .index {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-
-.containerCard{
-  width: 15rem; 
+.index__card{
+  width: 16rem; 
   background-color: rgb(242, 245, 255); 
-  border: solid red 3px;
-  margin: 3em;
-  padding: 3em;
+  margin: 2.6em;
+  padding: 2.6em;
   display: flex;
   border-radius: 0.5rem;
   box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
- 
 }
 
 .card_content{
   margin: 3em; 
 }
 
-.imgPubli {
+.card__img {
   align-items: center;
   width:10rem; 
   height: 10rem;
+  border-radius: 0.5rem;
 }
 
-.tituloArtigo {
+.card__titulo {
   font-size: 1.5em; 
   font-weight: bold; 
   width: 20rem; 
   margin-top: 2em;
-  margin-bottom: 2em; 
+  margin-bottom: 1.6em; 
   margin-left: auto; 
   margin-right: auto;
 }

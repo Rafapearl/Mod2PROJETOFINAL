@@ -28,13 +28,13 @@
     <% } %>
       <main class="index">
         <% artigo.forEach(item => { %>
-          <section class="containerCard" class="animation_in">
+          <section class="index__card">
             <article class="card_content">
               <a class="linken" href="/artigo/<%= item.id %>">
 
-                <img src="<%= item.imagem %>" alt="Imagem do tema" class="imgPubli">
+                <img src="<%= item.imagem %>" alt="Imagem do tema" class="card__img">
 
-                <h2 class="tituloArtigo">
+                <h2 class="card__titulo">
                   <%= item.titulo %>
                 </h2>
 
