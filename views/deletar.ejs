@@ -10,6 +10,69 @@
   <title>Document</title>
 </head>
 <body>
-  <%- include('header'); %>
+
+    <header>
+   
+    <nav>
+     <div class="links">
+       <a href="/">Home</a>
+       <a href="/criar">Escrever artigo</a>
+       <a href="/sobre">Autores </a>
+     </div>
+
+     <div class="barra-pesquisa">
+      <label for="">Pesquisar:</label>
+      <input type="text" placeholder="Nome do artigo" method="GET">
+     </div>
+
+     <div class="logo">
+       <img src="/img/logo5.png" class="logo" />
+     </div>
+    </nav>
+  
+  </header>
+
+  <% if(message != "") {  %>
+    <section id="message">
+        <p><%= message %></p> <span id="close">&times;</span>
+    </section>
+<% }  %>
+
+<%- include('header'); %>
+
+   <main>
+      <form action="/deletar/<%= artigo.id %>" method="POST">
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" placeholder="Nome do escritor" required>
+        </div>
+    
+        <div>
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email" placeholder="Email do escritor" required>
+        </div>
+
+        <div>
+            <label for="titulo">Artigo: </label>
+            <input type="text" name="titulo" id="titulo" placeholder="Titulo do artigo" required>
+        </div>
+
+        <div>
+            <label for="descricao">Descrição do artigo: </label>
+            <input type="text" name="descricao" id="descricao" placeholder="Descrição do artigo">
+        </div>
+
+        <div>
+            <label for="imagem">imagem: </label>
+            <input type="text" name="imagem" id="imagem" placeholder="Link da imagem" required>
+        </div>
+
+        <button type="submit">DELETAR !</button>
+
+    </form>
+ <% }  %>
+
+
+</main>
 </body>
 </html>
