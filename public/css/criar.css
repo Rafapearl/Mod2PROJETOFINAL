@@ -2,9 +2,14 @@ main {
   margin: 30px 0 0 30px;
   display: flex;
   align-items: flex-start;
-  height: 600px;
-  font-size: 1.2em;
-  width: 1024px;
+}
+
+.input-criar {
+  background-color: transparent ;
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  width: 220px;
 }
 
 .text-area {
@@ -14,8 +19,8 @@ main {
   border-radius: 10px;
   border: 2px solid transparent;
   outline: none;
-  font-family: "Heebo", sans-serif;
-  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.4;
   width: 900px;
@@ -42,24 +47,12 @@ main {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
-.input-criar {
-  background-color: transparent ;
-  border: 0;
-  border-bottom: 1px solid #000;
-  margin-bottom: 10px;
-  width: 220px;
-}
 
 .input-titulo {
   margin-left: 300px;
-}
-
-.input-criar ::placeholder {
-  color: black; 
-  font: 3em sans-serif;
 }
 
 .input-criar:focus {
@@ -82,8 +75,6 @@ button {
   margin-top: 20px;
   margin-left: 300px;
   font-size: 1.2rem;
-
-  
 }
 
 button:hover {
