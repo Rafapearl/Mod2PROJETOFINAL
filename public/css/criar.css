@@ -9,7 +9,20 @@ main {
   border: 0;
   border-bottom: 1px solid black;
   margin-bottom: 10px;
-  width: 220px;
+  width: 230px;
+  color:#ffffff;
+}
+
+.input-criar:focus {
+  outline: none;
+  color:#ffffff;
+  font-size: 1rem;
+}
+
+.input-criar::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .text-area {
@@ -37,8 +50,7 @@ main {
   cursor: text;
   color: #333333;
   background-color: white;
-  border-color: #333333;
-  font-weight: 900;
+  font-weight: 500;
   text-rendering: auto;
 }
 
@@ -50,19 +62,9 @@ main {
   font-size: 1.2em;
 }
 
-
 .input-titulo {
   margin-left: 300px;
-}
-
-.input-criar:focus {
-  outline: none;
-  color: #ffffff;
-}
-
-.input-criar::-webkit-input-placeholder {
-  color: #fff;
-  font-size: 1.4em;
+  width: 180px;
 }
 
 button {
@@ -74,6 +76,7 @@ button {
   background-color: #1C1369;
   margin-top: 20px;
   margin-left: 300px;
+  margin-bottom: 10px;
   font-size: 1.2rem;
 }
 
