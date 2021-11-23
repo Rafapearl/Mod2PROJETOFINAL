@@ -46,8 +46,7 @@ app.get("/artigo/:id", async (req, res) => {
 
 app.post("/subscription", async (req, res) => {
   const { nome, email, publi, titulo, imagem } = req.body;
-  //Artigo.create({ nome, email, publi, titulo, imagem });
-
+  
   if (!nome) {
     res.render("criar", {
       message: "Nome é obrigatório",
@@ -84,10 +83,7 @@ app.post("/subscription", async (req, res) => {
 
       message = `Parabéns ${nome}, o seu post foi publicado com sucesso!`
       res.redirect("/")
-      
-      // , {
-      //   artigo, message: `Parabéns ${nome}, o seu post foi publicado com sucesso!`
-      // })
+  
     } catch (err) {
       console.log(err)
 
@@ -105,7 +101,6 @@ app.get("/editar/:id", async (req, res) => {
 
   if (!artigo) {
     res.render("editar", {
-    
       message: "Informação não encontrada!",
     });
   }
@@ -114,11 +109,6 @@ app.get("/editar/:id", async (req, res) => {
     Artigo, message
   });
 });
-
-  // res.render("editar", {
-  //   artigo,
-  // });
-
 
   app.post("/editar/:id", async (req, res) => {
 
@@ -145,62 +135,29 @@ app.get("/deletar/:id", async(req, res) => {
 
   if(!artigo) {
     res.render("deletar", {
-      artigo,
       message: "Artigo não encontrado",
     })
   }
 
   res.render('deletar', {
-    artigo, mensagem
+    artigo,  message
   })
 })
 
-app.get("/deletar/:id", async (req, res) => {
 
-  const artigo = await Artigos.findByPk(req.params.id);
+app.post("/deletar/:id", async (req, res) => {
+
+  const artigo = await Artigo.findByPk(req.params.id);
 
   if (!artigo) {
     res.render("deletar", {
-      Artigos,
       message: "Artigo não foi encontrado!",
     });
   }
 
-    res.render("deletar", {
-    Artigos, message
-  });
-});
-
-app.post("/deletar/:id", async (req, res) => {
-
-  const artigo = await Artigos.findByPk(req.params.id);
-
-  if (!artigo) {
-    res.render("deletar", {
-      mensagem: "Artigo não foi encontrado!",
-    });
-  }
-
-  await Artigos.destroy();
+  await Artigo.destroy();
 
   res.redirect("/");
 });
 
-// app.post("/deletar/:id", async (req, res) => {
-//   const artigo = await Artigos.findByPk(req.params.id);
-
-//   if (!artigo) {
-//     res.render("deletar", {
-//       artigo, mensagem: "Artigo não foi encontrado!",
-//     });
-//   }
-
-//   await Artigos.destroy();
-
-//   message = `Artigo ${artigo.titulo} deletado com sucesso!`
-
-//   res.redirect("/");
-// });
-
-// Adicionando a const port e uma arow function de callback para mostrar no console que o servidor está rodando.
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
