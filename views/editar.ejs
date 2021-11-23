@@ -1,41 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/header.css">
   <title>Editar</title>
 </head>
 
 <body>
 
-  <nav>
-    <div class="links">
-      <a href="/">Home</a>
-      <a href="/criar">Escrever artigo</a>
-      <a href="/sobre">Autores </a>
-    </div>
-
-    <div class="barra-pesquisa">
-     <label for="">Pesquisar:</label>
-     <input type="text" placeholder="Nome do artigo" method="GET">
-    </div>
-
-    <div class="logo">
-      <img src="/img/logo5.png" class="logo" />
-    </div>
-   </nav>
- 
- </header>
+  <%- include('header'); %>
   
 
-  <% if(message != "") {  %>
-    <section id="message">
-        <p><%= message %></p> <span id="close">&times;</span>
-    </section>
-<% }  %>
 
     <section class="area__editar">
 
@@ -43,7 +23,7 @@
 
         <div>
            <label for="titulo">Altere o título</label>
-           <input type="text" name="nome" id="titulo" value="<%= artigo.titulo %>">
+           <input type="text" name="titulo" id="titulo" value="<%= artigo.titulo %>">
         </div>
 
         <div>
@@ -57,8 +37,13 @@
         </div>
 
         <div>
-          <label for="texto">Altere o artigo</label>
-          <input type="text" name="texto" id="publi"value="<%= artigo.publi %>">
+          <label for="imagem">Altere a imagem</label>
+          <input type="text" name="imagem" value="<%= artigo.imagem %>">
+        </div>
+
+        <div>
+          <label for="publi">Altere o artigo</label>
+          <input type="text" name="publi" id="publi" value="<%= artigo.publi %>">
         </div>
 
           <button type="submit">Editar</button>
