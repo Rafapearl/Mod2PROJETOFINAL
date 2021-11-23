@@ -35,13 +35,14 @@
 
         <div class="area__botao">
          
-          <a class="botao__editar" action="/editar/<%= artigo.id %>" type="submit" method="POST" href="/editar.ejs">
-            Editar
-          </a>
-  
-          <a class="botao__deletar" action="/deletar/<%= artigo.id %>" type="submit" method="DELETE" >
+          <button class="botao__editar">Editar
+          <a  action="/editar/<%= artigo.id %>" type="submit" method="POST" href="/editar.ejs">
+            
+          </a></button>
+          <button class="botao__deletar">
+          <a  action="/deletar/<%= artigo.id %>" type="submit" method="DELETE" >
             Deletar
-          </a>
+          </a></button>
 
         </div>
 
