@@ -46,7 +46,7 @@ app.get("/artigo/:id", async (req, res) => {
 
 app.post("/subscription", async (req, res) => {
   const { nome, email, publi, titulo, imagem } = req.body;
-  Artigo.create({ nome, email, publi, titulo, imagem });
+  //Artigo.create({ nome, email, publi, titulo, imagem });
 
   if (!nome) {
     res.render("criar", {
@@ -100,16 +100,18 @@ app.post("/subscription", async (req, res) => {
 });
 
 app.get("/editar/:id", async (req, res) => {
+
   const artigo = await Artigo.findByPk(req.params.id);
 
   if (!artigo) {
     res.render("editar", {
-      message: "Artigo não encontrado!",
+    
+      message: "Informação não encontrada!",
     });
   }
 
   res.render("editar", {
-    artigo, message
+    Artigo, message
   });
 });
 
@@ -118,24 +120,25 @@ app.get("/editar/:id", async (req, res) => {
   // });
 
 
-app.post("/editar/:id", async (req, res) => {
-  const artigo = await Artigo.findByPk(req.params.id);
+  app.post("/editar/:id", async (req, res) => {
 
-  const { nome, email, publi, titulo, imagem } = req.body;
-
-  artigo.nome = nome;
-  artigo.email = email;
-  artigo.publi = publi;
-  artigo.titulo = titulo;
-  artigo.imagem = imagem;
-
-  const artigoEditado = await artigo.save()
-
-  res.render("editar", {
-    artigo: artigoEditado,
-    mensagemSucesso: "Artigo editado com sucesso!",
+    const artigo = await Artigo.findByPk(req.params.id);
+  
+    const { nome, email, publi, titulo, imagem } = req.body;
+  
+    artigo.nome = nome;
+    artigo.email = email;
+    artigo.titulo = titulo; 
+    artigo.imagem = imagem;
+    artigo.publi = publi;
+  
+    const artigoEditado = await Artigo.save();
+  
+    res.render("editar", {
+      artigo: artigoEditado,
+      message: "Artigo editado com sucesso!",
+    });
   });
-});
 
 app.get("/deletar/:id", async(req, res) => {
   const artigo = await Artigo.findByPk(req.params.id)
