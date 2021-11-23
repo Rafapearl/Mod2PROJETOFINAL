@@ -2,9 +2,27 @@ main {
   margin: 30px 0 0 30px;
   display: flex;
   align-items: flex-start;
-  height: 600px;
-  font-size: 1.2em;
-  width: 1024px;
+}
+
+.input-criar {
+  background-color: transparent ;
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  width: 230px;
+  color:#ffffff;
+}
+
+.input-criar:focus {
+  outline: none;
+  color:#ffffff;
+  font-size: 1rem;
+}
+
+.input-criar::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .text-area {
@@ -14,8 +32,8 @@ main {
   border-radius: 10px;
   border: 2px solid transparent;
   outline: none;
-  font-family: "Heebo", sans-serif;
-  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.4;
   width: 900px;
@@ -32,8 +50,7 @@ main {
   cursor: text;
   color: #333333;
   background-color: white;
-  border-color: #333333;
-  font-weight: 900;
+  font-weight: 500;
   text-rendering: auto;
 }
 
@@ -42,34 +59,12 @@ main {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  font-size: 1em;
-}
-
-.input-criar {
-  background-color: transparent ;
-  border: 0;
-  border-bottom: 1px solid #000;
-  margin-bottom: 10px;
-  width: 220px;
+  font-size: 1.2em;
 }
 
 .input-titulo {
   margin-left: 300px;
-}
-
-.input-criar ::placeholder {
-  color: black; 
-  font: 3em sans-serif;
-}
-
-.input-criar:focus {
-  outline: none;
-  color: #ffffff;
-}
-
-.input-criar::-webkit-input-placeholder {
-  color: #fff;
-  font-size: 1.4em;
+  width: 180px;
 }
 
 button {
@@ -81,9 +76,8 @@ button {
   background-color: #1C1369;
   margin-top: 20px;
   margin-left: 300px;
+  margin-bottom: 10px;
   font-size: 1.2rem;
-
-  
 }
 
 button:hover {
