@@ -10,29 +10,40 @@
 </head>
 
 <body>
-  <%- include('header'); %>
+
+  <% if(message != "") {  %>
+    <section id="message">
+        <p><%= message %></p> <span id="close">&times;</span>
+    </section>
+<% }  %>
 
     <section class="area__editar">
+
       <form action="/editar/<%= artigo.id %>" method="POST">
+
         <div>
-          <label for="nome">Altere o título</label>
-          <input type="text" name="nome" value="<%= artigo.titulo %>">
+           <label for="titulo">Altere o título</label>
+           <input type="text" name="nome" id="titulo" value="<%= artigo.titulo %>">
         </div>
+
         <div>
           <label for="nome">Altere seu nome</label>
-          <input type="text" name="nome" value="<%= artigo.nome %>">
+          <input type="text" name="nome" id="nome" value="<%= artigo.nome %>">
         </div>
+
         <div>
           <label for="email">Altere o e-mail</label>
-          <input type="text" name="email" value="<%= artigo.email %>">
+          <input type="text" name="email" id="email" value="<%= artigo.email %>">
         </div>
+
         <div>
           <label for="texto">Altere o artigo</label>
-          <input type="text" name="texto" value="<%= artigo.publi %>">
+          <input type="text" name="texto" id="publi"value="<%= artigo.publi %>">
         </div>
+
+          <button type="submit">Editar</button>
       </form>
 
     </section>
-</body>
-
+   </body>
 </html>
