@@ -57,8 +57,10 @@
 
 .botao__deletar:hover{
     cursor: pointer;
-    color: rgb(248, 0, 50);
-    background-color:floralwhite;
+    color: rgb(255, 255, 255);
+    background-color:rgb(5, 3, 3);
+    transform:scale(1.1);
+    transition:1000ms;
 }
 
 .botao__editar {
@@ -67,8 +69,15 @@
     width: 6rem;
     margin-top: 1.5rem;
     border-radius: 0.5rem;
+    color:rgb(255, 255, 255);
+    background-color:rgb(1, 61, 139);
+
 }
 
 .botao__editar:hover{
     cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color:rgb(1, 61, 139);
+    transform:scale(1.1);
+    transition:1000ms;
 }
