@@ -70,7 +70,7 @@ app.post("/subscription", async (req, res) => {
   else if (!titulo) {
     res.render("criar", {
       message: "Dê um título ao seu artigo"
-    })
+    });
   }
 
   else {
