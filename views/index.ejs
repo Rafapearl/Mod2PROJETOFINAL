@@ -19,15 +19,16 @@
 <body>
   
   <%- include('header'); %>
+
   <% if(message !="" ) { %>
-    <section id="message">
-      <p>
-        <%= message %>
+    <section id="message"><p><%= message %>
       </p> <span id="close">&times;</span>
     </section>
     <% } %>
+
       <main class="index">
         <% artigo.forEach(item => { %>
+          
           <section class="index__card">
             <article class="card_content">
               <a class="linken" href="/artigo/<%= item.id %>">
