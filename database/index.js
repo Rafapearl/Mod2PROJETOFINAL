@@ -1,4 +1,6 @@
 const Sequelize = require("sequelize");
+require('dotenv').config()
+
 
 //Conectando com o DB do Heroku
 
