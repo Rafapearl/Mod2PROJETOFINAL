@@ -8,8 +8,6 @@
     border-radius: 8px;    
     width: calc(100vh); 
     justify-content: center; 
-    /* margin-left: auto; 
-    margin-right: auto;  */
     padding: 5em; 
     margin:4em;
 }
@@ -41,6 +39,7 @@
 .area__botao{
     display: flex;
     justify-content: space-around;
+    color: #ffffff;
 }
 
 .botao__deletar {
@@ -52,7 +51,7 @@
     border:none;
     border-radius: 0.5rem;
     margin-left: 2rem;
-    color: floralwhite;
+    color: rgb(255, 255, 255);
 }
 
 .botao__deletar:hover{
@@ -64,7 +63,6 @@
 }
 
 .botao__editar {
-    border: 1px solid black;
     font-size: 1.2rem;
     width: 6rem;
     margin-top: 1.5rem;

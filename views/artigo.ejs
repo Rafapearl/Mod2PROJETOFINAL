@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/artigo.css">
+  <link rel="stylesheet" href="/css/header.css">
 
   <title>Artigo</title>
 </head>
@@ -35,12 +36,13 @@
 
         <div class="area__botao">
          
-          <button class="botao__editar">Editar
-          <a  action="/editar/<%= artigo.id %>" type="submit" method="POST" href="/editar.ejs">
-            
+          <button class="botao__editar" type="submit"> 
+          <a  action="/editar" method="POST" href="/editar/<%= artigo.id %>">
+            Editar
           </a></button>
-          <button class="botao__deletar">
-          <a  action="/deletar/<%= artigo.id %>" type="submit" method="DELETE" >
+
+          <button class="botao__deletar" type="submit">
+          <a  action="/deletar" method="DELETE" href="/deletar/<%= artigo.id %>">
             Deletar
           </a></button>
 

@@ -106,9 +106,10 @@ app.get("/editar/:id", async (req, res) => {
   }
 
   res.render("editar", {
-    Artigo, message
+    artigo
+    });
   });
-});
+
 
   app.post("/editar/:id", async (req, res) => {
 
@@ -118,16 +119,13 @@ app.get("/editar/:id", async (req, res) => {
   
     artigo.nome = nome;
     artigo.email = email;
+    artigo.publi = publi;
     artigo.titulo = titulo; 
     artigo.imagem = imagem;
-    artigo.publi = publi;
   
-    const artigoEditado = await Artigo.save();
+    const artigoEditado = await artigo.save();
   
-    res.render("editar", {
-      artigo: artigoEditado,
-      message: "Artigo editado com sucesso!",
-    });
+    res.redirect("/")
   });
 
 app.get("/deletar/:id", async(req, res) => {
