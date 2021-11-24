@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/index.css">
-  <link rel="icon" type = " image / jpg " href="logo.jpeg">
+  <link rel="stylesheet" href="/css/deletar.css">
+
   <title>Deletar</title>
 </head>
 
@@ -19,7 +20,7 @@
          <form action="/deletar/<%= artigo.id %>" method="POST">
 
           <div>
-            <h4>Tem certeza que deseja deletar o artigo: <%= artigo.titulo %></h4>
+            <h4>Tem certeza que deseja deletar o artigo: <%= artigo.titulo %> ?</h4>
           </div>
     
          <button type="submit">DELETAR !</button>
