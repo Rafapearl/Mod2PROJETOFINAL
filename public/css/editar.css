@@ -33,6 +33,7 @@ textarea {
   background-color: #1C1369;
   border-radius: 4px;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .botao__editar:hover {
