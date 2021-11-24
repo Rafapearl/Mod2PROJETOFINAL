@@ -2,14 +2,16 @@ require('dotenv').config()
 
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000; // Const para armanezar a porta do servidor
+
+const port = process.env.PORT || 3000;
 const path = require("path");
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
+
 app.use(express.urlencoded());
 
-const Artigo = require("./models/artigo"); //Conexão com o bd
+const Artigo = require("./models/artigo"); 
 
 let message = "";
 
@@ -17,27 +19,27 @@ app.get("/", async (req, res) => {
 
   let artigo = await Artigo.findAll()
   res.render("index", {
-    artigo, // Objeto do artigo criado 
+    artigo, 
     message
-  }); // Nome do arquivo, o EJS já busca dentro da pasta views.
+  }); 
 });
 
 app.get("/criar", async (req, res) => {
-  res.render("criar"); // Nome do arquivo, o EJS já busca dentro da pasta views.
+  res.render("criar"); 
 });
 
 app.get("/sobre", (req, res) => {
-  res.render("sobre"); // Nome do arquivo, o EJS já busca dentro da pasta views.
+  res.render("sobre");
 });
 
 app.get("/artigo", (req, res) => {
-  res.render("artigo"); // Nome do arquivo, o EJS já busca dentro da pasta views.
+  res.render("artigo"); 
 });
 
 app.get("/artigo/:id", async (req, res) => {
   let artigo = await Artigo.findByPk(req.params.id)
   const id = req.params.id;
-  // const form = artigo[id];
+ 
   res.render("artigo", { 
     artigo 
   })
@@ -46,8 +48,7 @@ app.get("/artigo/:id", async (req, res) => {
 
 app.post("/subscription", async (req, res) => {
   const { nome, email, publi, titulo, imagem } = req.body;
-  //Artigo.create({ nome, email, publi, titulo, imagem });
-
+  
   if (!nome) {
     res.render("criar", {
       message: "Nome é obrigatório",
@@ -84,7 +85,7 @@ app.post("/subscription", async (req, res) => {
 
       message = `Parabéns ${nome}, o seu post foi publicado com sucesso!`
       res.redirect("/")
-
+  
     } catch (err) {
       console.log(err)
 
@@ -111,6 +112,7 @@ app.get("/editar/:id", async (req, res) => {
     });
   });
 
+
   app.post("/editar/:id", async (req, res) => {
 
     const artigo = await Artigo.findByPk(req.params.id);
@@ -133,15 +135,15 @@ app.get("/deletar/:id", async(req, res) => {
 
   if(!artigo) {
     res.render("deletar", {
-      artigo,
       message: "Artigo não encontrado",
     })
   }
 
   res.render('deletar', {
-    artigo
+    artigo,  message
   })
 })
+
 
 app.post("/deletar/:id", async (req, res) => {
 
@@ -153,10 +155,9 @@ app.post("/deletar/:id", async (req, res) => {
     });
   }
 
-  await artigo.destroy();
+  await Artigo.destroy();
 
   res.redirect("/");
 });
 
-// Adicionando a const port e uma arow function de callback para mostrar no console que o servidor está rodando.
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
