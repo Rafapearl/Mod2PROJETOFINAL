@@ -155,7 +155,7 @@ app.post("/deletar/:id", async (req, res) => {
     });
   }
 
-  await Artigo.destroy();
+  await artigo.destroy();
 
   res.redirect("/");
 });
