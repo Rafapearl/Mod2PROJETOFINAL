@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,24 @@
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/index.css">
+  <link rel="icon" type = " image / jpg " href="logo.jpeg">
   <title>Deletar</title>
 </head>
-<body>
 
-  <%- include('header'); %>
+   <body>
+     <%- include('header'); %>
 
-   <main>
-      <form action="/deletar/<%= artigo.id %>" method="POST">
-        <div>
-          <h4>Tem certeza que deseja deletar o artigo: <%= artigo.titulo %></h4>
-        </div>
+     <main>
+         <form action="/deletar/<%= artigo.id %>" method="POST">
+
+          <div>
+            <h4>Tem certeza que deseja deletar o artigo: <%= artigo.titulo %></h4>
+          </div>
     
+         <button type="submit">DELETAR !</button>
 
-        <button type="submit">DELETAR !</button>
+         </form>
+     </main>
 
-      </form>
-
-  </main>
-</body>
+  </body>
 </html>

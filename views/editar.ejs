@@ -8,47 +8,51 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="/css/header.css">
+<<<<<<< HEAD
+  <link rel="stylesheet" href="/css/editar.css">
+=======
+  <link rel="icon" type = " image / jpg " href="logo.jpeg">
+>>>>>>> 20990ee25bde34f8ff97999dba0fefbcf4581b9f
   <title>Editar</title>
 </head>
 
-<body>
-
-  <%- include('header'); %>
+  <body>
+   <%- include('header'); %>
   
-
-
     <section class="area__editar">
 
       <form action="/editar/<%= artigo.id %>" method="POST">
-
+        <h4>Altere:</h4>
+        
         <div>
-           <label for="titulo">Altere o título</label>
-           <input type="text" name="titulo" id="titulo" value="<%= artigo.titulo %>">
-        </div>
-
-        <div>
-          <label for="nome">Altere seu nome</label>
+          <label for="nome">Nome</label>
           <input type="text" name="nome" id="nome" value="<%= artigo.nome %>">
         </div>
-
+        
         <div>
-          <label for="email">Altere o e-mail</label>
+          <label for="email">E-mail</label>
           <input type="text" name="email" id="email" value="<%= artigo.email %>">
         </div>
-
+        
         <div>
           <label for="imagem">Altere a imagem</label>
           <input type="text" name="imagem" value="<%= artigo.imagem %>">
         </div>
-
+        
         <div>
-          <label for="publi">Altere o artigo</label>
-          <input type="text" name="publi" id="publi" value="<%= artigo.publi %>">
+           <label for="titulo">Título</label>
+           <input type="text" name="titulo" id="titulo" value="<%= artigo.titulo %>">
         </div>
 
-          <button type="submit">Editar</button>
+        <div>
+          <label for="publi">Artigo</label>
+          <textarea type="text" name="publi" id="publi" value="<%= artigo.publi %>"><%= artigo.publi %></textarea>
+        </div>
+
+          <button type="submit" class="botao__editar">Editar</button>
       </form>
 
     </section>
+
    </body>
 </html>
