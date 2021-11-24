@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/artigo.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="icon" type = " image / jpg " href="logo.jpeg">
+
   <title>Artigo</title>
 </head>
 
@@ -36,15 +36,16 @@
 
          <div class="area__botao">
          
-          <button class="botao__editar" type="submit"> Editar
-          <a  action="/editar" method="POST" href="/editar/<%= artigo.id %>">
-          </a>          </button>
+          <button class="botao__editar" type="submit"> 
+          <a  action="/editar" method="POST" href="/editar/<%= artigo.id %>" id="botao-editar">Editar
+          </a>          
+          </button>
 
 
-          <button class="botao__deletar" type="submit">Deletar
-          <a  action="/deletar" method="DELETE" href="/deletar/<%= artigo.id %>">
-            
-          </a></button>
+          <button class="botao__deletar" type="submit">
+          <a  action="/deletar" method="DELETE" href="/deletar/<%= artigo.id %>" id="botao-deletar">Deletar
+          </a>
+          </button>
 
          </div>
 
